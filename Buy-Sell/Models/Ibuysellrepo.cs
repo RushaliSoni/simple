@@ -9,7 +9,7 @@ namespace Buy_Sell.Models
     {
         IEnumerable<buysellitem> GetAll();
         buysellitem Get(int id);
-        void Add(buysellitem intem);
+        void Add(buysellitem item);
      
        
 

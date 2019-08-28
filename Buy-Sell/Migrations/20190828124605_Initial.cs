@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Buy_Sell.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,8 @@ namespace Buy_Sell.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Qty = table.Column<decimal>(nullable: false),
                     Price = table.Column<decimal>(nullable: false),
-                    Ordertype = table.Column<int>(nullable: false)
+                    Ordertype = table.Column<int>(nullable: false),
+                    status = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

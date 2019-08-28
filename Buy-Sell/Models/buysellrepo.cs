@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,10 +27,31 @@ namespace Buy_Sell.Models
         }
         public void Add(buysellitem item)
         {
-            context.BuySellTable.Add(item);
+            var query = (from s in context.BuySellTable
+                         where s.Price.Equals(item.Price) && s.Qty.Equals(item.Qty) && !s.Ordertype.Equals(item.Ordertype) && s.status.Equals(item.status)
+                         select s).FirstOrDefault();
+
+
+            if (query != null)
+            {
+               
+                context.BuySellTable.Add(item);
+                query.status = 1;
+                item.status = 1;
+                context.Update(query);
+            }
+            else
+            {
+                context.BuySellTable.Add(item);
+            }
             context.SaveChanges();
+
+
+
+
         }
 
-       
+
+
     }
 }

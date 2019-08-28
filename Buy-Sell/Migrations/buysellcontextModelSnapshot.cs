@@ -30,6 +30,8 @@ namespace Buy_Sell.Migrations
 
                     b.Property<decimal>("Qty");
 
+                    b.Property<int>("status");
+
                     b.HasKey("Id");
 
                     b.ToTable("BuySellTable");

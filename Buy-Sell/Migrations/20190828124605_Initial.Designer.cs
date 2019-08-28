@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Buy_Sell.Migrations
 {
     [DbContext(typeof(buysellcontext))]
-    [Migration("20190827094241_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190828124605_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,6 +31,8 @@ namespace Buy_Sell.Migrations
                     b.Property<decimal>("Price");
 
                     b.Property<decimal>("Qty");
+
+                    b.Property<int>("status");
 
                     b.HasKey("Id");
 

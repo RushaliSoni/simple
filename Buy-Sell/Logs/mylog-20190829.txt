@@ -1,0 +1,143 @@
+2019-08-29T12:15:51.0778621+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44332/api/CreateOrder   (ca22a1cb)
+2019-08-29T12:15:51.2290392+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (500cc934)
+2019-08-29T12:15:51.3530026+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Get\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Get()" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:15:56.0143670+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:15:56.4141098+05:30 80000008-0001-fc00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Price"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:15:56.4204798+05:30 80000008-0001-fc00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Qty"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:15:56.7955915+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"buysellcontext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2019-08-29T12:16:05.3872354+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("110"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Ordertype], [b].[Price], [b].[Qty], [b].[status]
+FROM [BuySellTable] AS [b]" (0723d8ff)
+2019-08-29T12:16:05.5368418+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9503.339ms. (50a9e262)
+2019-08-29T12:16:05.5770489+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Buy_Sell.Models.buysellitem, Buy-Sell, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-08-29T12:16:06.1160831+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" in 14745.3463ms (afa2e885)
+2019-08-29T12:16:06.1201930+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (99874f2b)
+2019-08-29T12:16:06.1361324+05:30 80000008-0001-fc00-b63f-84710c7967bb [INF] Request finished in 15155.3049ms 200 application/json; charset=utf-8 (791a596a)
+2019-08-29T12:16:06.3164783+05:30 8000001d-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44332/favicon.ico   (ca22a1cb)
+2019-08-29T12:16:06.3401552+05:30 8000001d-0000-fc00-b63f-84710c7967bb [INF] Request finished in 23.9377ms 404  (791a596a)
+2019-08-29T12:16:25.6464144+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44332/api/CreateOrder application/json 56 (ca22a1cb)
+2019-08-29T12:16:25.6525333+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (500cc934)
+2019-08-29T12:16:25.6844350+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create(Buy_Sell.viewmodel.buysellcreatviewmodel)" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:16:25.9538558+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:16:43.3901052+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__item_Price_0='?' (DbType = Decimal), @__item_Qty_1='?' (DbType = Decimal), @__item_Ordertype_2='?' (DbType = Int32), @__item_status_3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Ordertype], [s].[Price], [s].[Qty], [s].[status]
+FROM [BuySellTable] AS [s]
+WHERE ((([s].[Price] = @__item_Price_0) AND ([s].[Qty] = @__item_Qty_1)) AND ([s].[Ordertype] <> @__item_Ordertype_2)) AND ([s].[status] = @__item_status_3)" (0723d8ff)
+2019-08-29T12:16:51.3090364+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("34"ms) [Parameters=["@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [BuySellTable] SET [Ordertype] = @p0, [Price] = @p1, [Qty] = @p2, [status] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2019-08-29T12:16:51.3187053+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BuySellTable] ([Ordertype], [Price], [Qty], [status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [BuySellTable]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2019-08-29T12:17:40.1449358+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 74186.0043ms. (50a9e262)
+2019-08-29T12:17:40.1549465+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2019-08-29T12:17:40.1590567+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" in 74470.8633ms (afa2e885)
+2019-08-29T12:17:40.1627385+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (99874f2b)
+2019-08-29T12:17:40.2056888+05:30 8000000d-0003-fe00-b63f-84710c7967bb [INF] Request finished in 74520.4122ms 200  (791a596a)
+2019-08-29T12:33:45.9979348+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44332/api/CreateOrder   (ca22a1cb)
+2019-08-29T12:33:46.1223298+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (500cc934)
+2019-08-29T12:33:46.1594770+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Get\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Get()" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:33:46.7359606+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:33:47.0548554+05:30 8000000a-0001-fc00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Price"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:33:47.0748907+05:30 8000000a-0001-fc00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Qty"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:33:47.3619595+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"buysellcontext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2019-08-29T12:33:56.4546422+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("320"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Ordertype], [b].[Price], [b].[Qty], [b].[status]
+FROM [BuySellTable] AS [b]" (0723d8ff)
+2019-08-29T12:33:56.5480280+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9799.9423ms. (50a9e262)
+2019-08-29T12:33:56.5658982+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Buy_Sell.Models.buysellitem, Buy-Sell, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-08-29T12:33:56.7857481+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" in 10597.4237ms (afa2e885)
+2019-08-29T12:33:56.8218281+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (99874f2b)
+2019-08-29T12:33:56.8960986+05:30 8000000a-0001-fc00-b63f-84710c7967bb [INF] Request finished in 10851.5966ms 200 application/json; charset=utf-8 (791a596a)
+2019-08-29T12:34:20.8916787+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44332/api/CreateOrder application/json 57 (ca22a1cb)
+2019-08-29T12:34:20.8958371+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (500cc934)
+2019-08-29T12:34:20.9188722+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create(Buy_Sell.viewmodel.buysellcreatviewmodel)" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:34:21.0009727+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:34:41.4637995+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_Price_0='?' (DbType = Decimal), @__item_Qty_1='?' (DbType = Decimal), @__item_Ordertype_2='?' (DbType = Int32), @__item_status_3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Ordertype], [s].[Price], [s].[Qty], [s].[status]
+FROM [BuySellTable] AS [s]
+WHERE ((([s].[Price] = @__item_Price_0) AND ([s].[Qty] = @__item_Qty_1)) AND ([s].[Ordertype] <> @__item_Ordertype_2)) AND ([s].[status] = @__item_status_3)" (0723d8ff)
+2019-08-29T12:35:09.8532822+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BuySellTable] ([Ordertype], [Price], [Qty], [status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [BuySellTable]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2019-08-29T12:36:20.0354240+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 119028.6208ms. (50a9e262)
+2019-08-29T12:36:20.0510441+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2019-08-29T12:36:20.0554965+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" in 119132.4502ms (afa2e885)
+2019-08-29T12:36:20.0592020+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (99874f2b)
+2019-08-29T12:36:20.0700198+05:30 8000000c-0001-fc00-b63f-84710c7967bb [INF] Request finished in 119173.9371ms 200  (791a596a)
+2019-08-29T12:43:16.3664158+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44332/api/CreateOrder   (ca22a1cb)
+2019-08-29T12:43:16.4797227+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (500cc934)
+2019-08-29T12:43:16.5226801+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Get\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Get()" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:43:17.0008953+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:43:17.1758122+05:30 8000000e-0001-fc00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Price"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:43:17.1805968+05:30 8000000e-0001-fc00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Qty"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:43:17.2991984+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"buysellcontext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2019-08-29T12:43:22.7252807+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("163"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Ordertype], [b].[Price], [b].[Qty], [b].[status]
+FROM [BuySellTable] AS [b]" (0723d8ff)
+2019-08-29T12:43:22.8034921+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 5792.7898ms. (50a9e262)
+2019-08-29T12:43:22.8200509+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Buy_Sell.Models.buysellitem, Buy-Sell, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-08-29T12:43:22.9499585+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" in 6416.5281ms (afa2e885)
+2019-08-29T12:43:22.9528250+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (99874f2b)
+2019-08-29T12:43:22.9647758+05:30 8000000e-0001-fc00-b63f-84710c7967bb [INF] Request finished in 6611.9235ms 200 application/json; charset=utf-8 (791a596a)
+2019-08-29T12:43:34.3603084+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44332/api/CreateOrder application/json 57 (ca22a1cb)
+2019-08-29T12:43:34.3697435+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (500cc934)
+2019-08-29T12:43:34.4022450+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create(Buy_Sell.viewmodel.buysellcreatviewmodel)" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:43:34.4824904+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:43:45.9521183+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__item_Price_0='?' (DbType = Decimal), @__item_Qty_1='?' (DbType = Decimal), @__item_Ordertype_2='?' (DbType = Int32), @__item_status_3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Ordertype], [s].[Price], [s].[Qty], [s].[status]
+FROM [BuySellTable] AS [s]
+WHERE ((([s].[Price] = @__item_Price_0) AND ([s].[Qty] = @__item_Qty_1)) AND ([s].[Ordertype] <> @__item_Ordertype_2)) AND ([s].[status] = @__item_status_3)" (0723d8ff)
+2019-08-29T12:43:54.3857438+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BuySellTable] ([Ordertype], [Price], [Qty], [status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [BuySellTable]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2019-08-29T12:44:46.5398983+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 72053.6701ms. (50a9e262)
+2019-08-29T12:44:46.5487223+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2019-08-29T12:44:46.5519510+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" in 72146.6703ms (afa2e885)
+2019-08-29T12:44:46.5557524+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (99874f2b)
+2019-08-29T12:44:46.5652687+05:30 80000002-0002-fd00-b63f-84710c7967bb [INF] Request finished in 72203.0207ms 200  (791a596a)
+2019-08-29T12:50:19.2484815+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44332/api/CreateOrder   (ca22a1cb)
+2019-08-29T12:50:19.4193570+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (500cc934)
+2019-08-29T12:50:19.4324116+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44332/api/CreateOrder application/json 57 (ca22a1cb)
+2019-08-29T12:50:19.4386751+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Executing endpoint '"Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)"' (500cc934)
+2019-08-29T12:50:19.4991178+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create(Buy_Sell.viewmodel.buysellcreatviewmodel)" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:50:19.4991329+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Get\", controller = \"CreateOrder\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Get()" on controller "Buy_Sell.Controllers.CreateOrderController" ("Buy-Sell"). (122b2fdf)
+2019-08-29T12:50:19.9958222+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:50:20.1860839+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Executing action method "Buy_Sell.Controllers.CreateOrderController.Create (Buy-Sell)" - Validation state: Valid (dad538d7)
+2019-08-29T12:50:37.5258728+05:30 8000000b-0001-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Price"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:50:37.5305130+05:30 8000000b-0001-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Qty"' on entity type '"buysellitem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-08-29T12:50:39.4275101+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"buysellcontext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2019-08-29T12:50:39.4293672+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"buysellcontext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2019-08-29T12:50:44.6705483+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Ordertype], [b].[Price], [b].[Qty], [b].[status]
+FROM [BuySellTable] AS [b]" (0723d8ff)
+2019-08-29T12:50:44.6705469+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("153"ms) [Parameters=["@__item_Price_0='?' (DbType = Decimal), @__item_Qty_1='?' (DbType = Decimal), @__item_Ordertype_2='?' (DbType = Int32), @__item_status_3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Ordertype], [s].[Price], [s].[Qty], [s].[status]
+FROM [BuySellTable] AS [s]
+WHERE ((([s].[Price] = @__item_Price_0) AND ([s].[Qty] = @__item_Qty_1)) AND ([s].[Ordertype] <> @__item_Ordertype_2)) AND ([s].[status] = @__item_status_3)" (0723d8ff)
+2019-08-29T12:50:52.1409547+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executed action method "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 30154.8196ms. (50a9e262)
+2019-08-29T12:50:52.2171192+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Buy_Sell.Models.buysellitem, Buy-Sell, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-08-29T12:50:52.2943044+05:30 8000001f-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BuySellTable] ([Ordertype], [Price], [Qty], [status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [BuySellTable]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2019-08-29T12:51:02.1441364+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executed action "Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)" in 32810.1242ms (afa2e885)
+2019-08-29T12:51:02.9444969+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Executed endpoint '"Buy_Sell.Controllers.CreateOrderController.Get (Buy-Sell)"' (99874f2b)
+2019-08-29T12:51:02.9736644+05:30 8000000b-0001-fd00-b63f-84710c7967bb [INF] Request finished in 43732.2332ms 200 application/json; charset=utf-8 (791a596a)

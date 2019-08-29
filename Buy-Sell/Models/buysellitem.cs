@@ -8,14 +8,14 @@ namespace Buy_Sell.Models
 {
     public class buysellitem
     {
-        
-        public int  Id { get; set; }
 
-        [Required]
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Enter Quntity")]
         public decimal Qty { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Enter Price")]
         public decimal Price { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Enter OrderType buy or sell")]
         public order Ordertype { get; set; }
         [Required]
         public int status { get; set; }

@@ -39,6 +39,7 @@ namespace Buy_Sell.Models
                 query.status = 1;
                 item.status = 1;
                 context.Update(query);
+                
             }
             else
             {
